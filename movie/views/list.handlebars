@@ -1,0 +1,38 @@
+<h1>База даних фільмів</h1>
+
+<a href="/logout">Вийти</a>
+
+<table border="1" cellpadding="8">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Назва</th>
+            <th>Рік</th>
+            <th>Рейтинг</th>
+            <th>Дії</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {{#each movies}}
+        <tr>
+            <td>{{id}}</td>
+            <td>{{title}}</td>
+            <td>{{year}}</td>
+            <td>
+                {{#each (range 1 5)}}
+                    {{#if (lte this ../rating)}}★{{else}}☆{{/if}}
+                {{/each}}
+                ({{rating}})
+            </td>
+            <td>
+                <a href="/movie/edit/{{id}}">edit</a> |
+                <a href="/movie/delete/{{id}}">delete</a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+<br>
+<a href="/movie/form">new</a>

@@ -1,0 +1,13 @@
+{
+  "type": "module",
+  "dependencies": {
+    "connect-ensure-login": "^0.1.1",
+    "express": "^4.19.0",
+    "express-handlebars": "^7.0.7",
+    "express-session": "^1.19.0",
+    "md5": "^2.3.0",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0",
+    "sqlite3": "^5.1.7"
+  }
+}
